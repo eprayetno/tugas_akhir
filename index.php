@@ -10,11 +10,15 @@ include 'header.php';
         <div class="card">
             <div class="header">
                 <h2>
-                     DAFTAR FILM
+                    DAFTAR FILM
                     <small>Berikut ini adalah daftar film</small>
                 </h2>
             </div>
             <div class="body">
+            <a class="btn bg-pink waves-effect m-b-15" role="button" data-toggle="collapse" href="tambah.php" aria-expanded="false"
+                               aria-controls="collapseExample">
+                                TAMBAH DAFTAR FILM
+                            </a>
                 <div class="row">
                     <?php foreach ($film as $row): ?>
                     <div class="col-sm-6 col-md-3">
@@ -28,8 +32,8 @@ include 'header.php';
                                 <?= $row["sinopsis"] ?>
                             </p>
                             <p>
-                                <a href="javascript:void(0);" class="btn btn-primary waves-effect" role="button">EDIT</a>
-                                <a href="javascript:void(0);" class="btn btn-primary waves-effect" role="button">DELETE</a>
+                                <a href="update.php?id=<?= $row["id"] ?>" class="btn btn-primary waves-effect" role="button">EDIT</a>
+                                <a href="hapus.php?id=<?= $row["id"] ?>" class="btn btn-primary waves-effect" role="button">HAPUS</a>
                             </p>
                             </div>
                         </div>

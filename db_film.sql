@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2020 at 06:29 PM
+-- Generation Time: Jun 21, 2020 at 08:52 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -34,19 +34,20 @@ CREATE TABLE `film` (
   `tahun` int(4) NOT NULL,
   `genre` varchar(20) NOT NULL,
   `sutradara` varchar(50) NOT NULL,
-  `poster` varchar(20) NOT NULL
+  `poster` varchar(50) NOT NULL,
+  `sinopsis` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `film`
 --
 
-INSERT INTO `film` (`id`, `judul`, `tahun`, `genre`, `sutradara`, `poster`) VALUES
-(6, 'Parasite', 2019, 'drama', 'Bong Joon Ho', 'parasite.jpg'),
-(7, 'Joker', 2019, 'drama', 'Todd Phillips', 'joker.jpg'),
-(8, 'Inception', 2010, 'action', 'Christopher Nolan', 'inception.jpg'),
-(9, 'The Shawshank Redemption', 1994, 'drama', 'Frank Darabont', 'the-shawshank-redemp'),
-(10, 'Forrest Gump', 1994, 'romance', 'Robert Zemeckis', 'forrest-gump.jpg');
+INSERT INTO `film` (`id`, `judul`, `tahun`, `genre`, `sutradara`, `poster`, `sinopsis`) VALUES
+(6, 'Parasite', 2019, 'drama', 'Bong Joon Ho', 'parasite.jpg', 'Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.'),
+(7, 'Joker', 2019, 'drama', 'Todd Phillips', 'joker.jpg', 'In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.'),
+(8, 'Inception', 2010, 'action', 'Christopher Nolan', 'inception.jpg', 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.'),
+(9, 'The Shawshank Redemption', 1994, 'drama', 'Frank Darabont', 'the-shawshank-redemption.jpg', 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.'),
+(10, 'Forrest Gump', 1994, 'romance', 'Robert Zemeckis', 'forrest-gump.jpg', 'The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.');
 
 --
 -- Indexes for dumped tables
